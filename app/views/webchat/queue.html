@@ -1,0 +1,48 @@
+{{<webchat_template}}
+
+
+{{$content}}
+<main id="content" role="main">
+
+  <!-- <a class="link-back" href="/examples/">Back to the GOV.UK prototype kit examples</a> -->
+
+  <form action="/" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Waiting for an advisor
+    </h1>
+    <p>Current wait time: 8 minutes</p>
+    <div class="preloader">
+      <img class="preloader__image" src="/public/images/preloader_on_grey.gif" />
+    </div>
+  
+    <p>You can continue to browse GOV.UK while you wait. We'll notify you when an advisor is free.</p>
+    <div class="form-group">
+      <button class="button">Continue browsing GOV.UK</button>
+    </div>
+    <a href="done">End chat now</a>
+    <!-- <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+ -->
+  </form>
+
+  <script>
+    $(document).keypress(function(e) {
+      e.preventDefault();
+      console.log('key was: ' + e.which) 
+      if(e.which == 96) {
+          window.location.href = "chat";
+      }
+    });
+    // setTimeout(function(){ 
+    //   window.location.href = "chat";
+    // }, 1500);
+  </script>
+
+
+</main>
+
+{{/content}}
+
+{{/webchat_template}}
