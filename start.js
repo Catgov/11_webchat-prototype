@@ -7,3 +7,5 @@ process.on('SIGINT', function() {
   process.kill(process.pid, 'SIGTERM');
   process.exit();
 });
+
+// This is a harmless comment
